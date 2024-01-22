@@ -4,7 +4,9 @@ Component1 As CanvasComponent:
             Default: ="Text"
     SubMenuOnselect():
         ThisProperty:
-            Default: ="Text"
+            Default: |-
+                =Set(VarSubTab,ThisItem.Title);
+                Navigate(ThisItem.TargetScreen,Transition.None);
     Adminicon_menu: |-
         =Table(
             {
@@ -435,7 +437,7 @@ Component1 As CanvasComponent:
                 FontWeight: =FontWeight.Semibold
                 HoverFill: =Color.AntiqueWhite
                 OnSelect: |-
-                    =Set(CureentScreen,ThisItem.Title);
+                    =Component1.SubMenuOnselect();
                     Navigate(ThisItem.TargetScreen,Transition.None);
                 PaddingLeft: =75
                 PressedFill: =Color.Aqua
@@ -455,9 +457,7 @@ Component1 As CanvasComponent:
         Label42 As label:
             Fill: =If(ThisItem.Title=MainMenu.Selected.Title,Color.AliceBlue,RGBA(0, 0, 0, 0))
             FontWeight: =FontWeight.Semibold
-            OnSelect: |-
-                =Set(VarExpandMeu,!VarExpandMeu);
-                Navigate(ThisItem.TargetScreen,Transition.None);
+            OnSelect: =Component1.MainMenuOnselect()
             PaddingLeft: =40
             Text: =ThisItem.Title
             Width: =MainMenu.Width

@@ -3,7 +3,9 @@
     "'compApprovedInitiatives(C)' As Component1":
         Height: =768
         MainMenuOnselect: ="Text"
-        SubMenuOnselect: ="Text"
+        SubMenuOnselect: |-
+            =Set(VarSubTab,ThisItem.Title);
+            Navigate(ThisItem.TargetScreen,Transition.None);
         ZIndex: =7
 
     "'Main-Approved Initiatives' As groupContainer.verticalAutoLayoutContainer":

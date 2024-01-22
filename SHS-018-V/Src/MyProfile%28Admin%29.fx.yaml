@@ -449,6 +449,8 @@
         CurrentScreen: ="MyProfile(Admin)"
         Height: =768
         MainMenuOnselect: ="Text"
-        SubMenuOnselect: ="Text"
+        SubMenuOnselect: |-
+            =Set(VarSubTab,ThisItem.Title);
+            Navigate(ThisItem.TargetScreen,Transition.None);
         ZIndex: =2
 

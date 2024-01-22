@@ -4,7 +4,9 @@
         CurrentScreen: ="Inbox"
         Height: =768
         MainMenuOnselect: ="Text"
-        SubMenuOnselect: ="Text"
+        SubMenuOnselect: |-
+            =Set(VarSubTab,ThisItem.Title);
+            Navigate(ThisItem.TargetScreen,Transition.None);
 
     "'Main-AllStudy' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-CompAllstudy.ComHeaderHeight

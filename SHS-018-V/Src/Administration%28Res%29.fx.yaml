@@ -3,7 +3,9 @@
     Component1_19 As Component1:
         Height: =768
         MainMenuOnselect: ="Text"
-        SubMenuOnselect: ="Text"
+        SubMenuOnselect: |-
+            =Set(VarSubTab,ThisItem.Title);
+            Navigate(ThisItem.TargetScreen,Transition.None);
 
     Container18 As groupContainer.manualLayoutContainer:
         Fill: =Color.AliceBlue

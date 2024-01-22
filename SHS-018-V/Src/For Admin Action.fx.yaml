@@ -53,7 +53,9 @@
         CurrentScreen: ="Inbox"
         Height: =768
         MainMenuOnselect: ="Text"
-        SubMenuOnselect: ="Text"
+        SubMenuOnselect: |-
+            =Set(VarSubTab,ThisItem.Title);
+            Navigate(ThisItem.TargetScreen,Transition.None);
         ZIndex: =2
 
     Container14_8 As groupContainer.verticalAutoLayoutContainer:

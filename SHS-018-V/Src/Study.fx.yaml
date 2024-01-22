@@ -4,7 +4,9 @@ Study As screen:
         CurrentScreen: ="Administration"
         Height: =768
         MainMenuOnselect: ="Text"
-        SubMenuOnselect: ="Text"
+        SubMenuOnselect: |-
+            =Set(VarSubTab,ThisItem.Title);
+            Navigate(ThisItem.TargetScreen,Transition.None);
 
     "'Main-Study' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-compStudy.ComHeaderHeight

@@ -4,7 +4,9 @@
         CurrentScreen: ="Settings"
         Height: =768
         MainMenuOnselect: ="Text"
-        SubMenuOnselect: ="Text"
+        SubMenuOnselect: |-
+            =Set(VarSubTab,ThisItem.Title);
+            Navigate(ThisItem.TargetScreen,Transition.None);
 
     "'Main(shsuser)' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-SHSusercomp.ComHeaderHeight

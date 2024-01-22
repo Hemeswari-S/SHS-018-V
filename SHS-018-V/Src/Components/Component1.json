@@ -2443,7 +2443,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Set(VarExpandMeu,!VarExpandMeu);\nNavigate(ThisItem.TargetScreen,Transition.None);",
+                "InvariantScript": "Component1.MainMenuOnselect()",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -3588,7 +3588,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(CureentScreen,ThisItem.Title);\nNavigate(ThisItem.TargetScreen,Transition.None);",
+                    "InvariantScript": "Component1.SubMenuOnselect();\r\nNavigate(ThisItem.TargetScreen,Transition.None);",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -5071,9 +5071,16 @@
         "NameMapSourceSchema": "?"
       },
       "MainMenuOnselect",
-      "SubMenuOnselect"
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "\"Text\"",
+        "InvariantPropertyName": "SubMenuOnselect",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      }
     ],
-    "LastModifiedTimestamp": "638415058876552461",
+    "LastModifiedTimestamp": "638415064324538272",
     "Name": "Component1",
     "Rules": [
       {
@@ -5144,7 +5151,7 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "\"Text\"",
+        "InvariantScript": "Set(VarSubTab,ThisItem.Title);\r\nNavigate(ThisItem.TargetScreen,Transition.None);",
         "Property": "SubMenuOnselect",
         "RuleProviderType": "System"
       },
@@ -5321,7 +5328,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638415058876552461",
+  "LastModifiedTimestamp": "638415064324538272",
   "Name": "415e1786c3c94354acf26afaf63ccb82",
   "OverridableProperties": {},
   "Version": "638327128456687156"
