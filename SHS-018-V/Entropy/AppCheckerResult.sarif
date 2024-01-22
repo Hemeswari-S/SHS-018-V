@@ -16947,19 +16947,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.InitiativeCode_DataCard1_2.DataCardValue72_2.AccessibleLabel"
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.Budget_DataCard1_2.DataCardValue80_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.InitiativeCode_DataCard1_2.DataCardValue72_2.AccessibleLabel",
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.Budget_DataCard1_2.DataCardValue80_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "For Champion Action(C)",
-                "type": "'For Champion Action(C)'.DisplayInitiative.Form3_2.InitiativeCode_DataCard1_2.DataCardValue72_2"
+                "type": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.Budget_DataCard1_2.DataCardValue80_2"
               }
             }
           ],
@@ -16977,19 +16977,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.'Initiative Name_DataCard1_2'.DataCardValue73_2.AccessibleLabel"
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.'Target Audience_DataCard1_2'.DataCardValue79_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.'Initiative Name_DataCard1_2'.DataCardValue73_2.AccessibleLabel",
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.'Target Audience_DataCard1_2'.DataCardValue79_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "For Champion Action(C)",
-                "type": "'For Champion Action(C)'.DisplayInitiative.Form3_2.'Initiative Name_DataCard1_2'.DataCardValue73_2"
+                "type": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.'Target Audience_DataCard1_2'.DataCardValue79_2"
               }
             }
           ],
@@ -17007,19 +17007,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.Description_DataCard1_2.DataCardValue74_2.AccessibleLabel"
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.'End Date_DataCard1_2'.DataCardValue78_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.Description_DataCard1_2.DataCardValue74_2.AccessibleLabel",
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.'End Date_DataCard1_2'.DataCardValue78_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "For Champion Action(C)",
-                "type": "'For Champion Action(C)'.DisplayInitiative.Form3_2.Description_DataCard1_2.DataCardValue74_2"
+                "type": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.'End Date_DataCard1_2'.DataCardValue78_2"
               }
             }
           ],
@@ -17037,19 +17037,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.Factor_DataCard1_2.DataCardValue75_2.AccessibleLabel"
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.StartDate_DataCard1_2.DataCardValue77_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.Factor_DataCard1_2.DataCardValue75_2.AccessibleLabel",
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.StartDate_DataCard1_2.DataCardValue77_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "For Champion Action(C)",
-                "type": "'For Champion Action(C)'.DisplayInitiative.Form3_2.Factor_DataCard1_2.DataCardValue75_2"
+                "type": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.StartDate_DataCard1_2.DataCardValue77_2"
               }
             }
           ],
@@ -17067,19 +17067,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.SubFactors_DataCard1_2.DataCardValue76_2.AccessibleLabel"
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.SubFactors_DataCard1_2.DataCardValue76_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.SubFactors_DataCard1_2.DataCardValue76_2.AccessibleLabel",
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.SubFactors_DataCard1_2.DataCardValue76_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "For Champion Action(C)",
-                "type": "'For Champion Action(C)'.DisplayInitiative.Form3_2.SubFactors_DataCard1_2.DataCardValue76_2"
+                "type": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.SubFactors_DataCard1_2.DataCardValue76_2"
               }
             }
           ],
@@ -17097,19 +17097,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.StartDate_DataCard1_2.DataCardValue77_2.AccessibleLabel"
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.Factor_DataCard1_2.DataCardValue75_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.StartDate_DataCard1_2.DataCardValue77_2.AccessibleLabel",
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.Factor_DataCard1_2.DataCardValue75_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "For Champion Action(C)",
-                "type": "'For Champion Action(C)'.DisplayInitiative.Form3_2.StartDate_DataCard1_2.DataCardValue77_2"
+                "type": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.Factor_DataCard1_2.DataCardValue75_2"
               }
             }
           ],
@@ -17127,19 +17127,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.'End Date_DataCard1_2'.DataCardValue78_2.AccessibleLabel"
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.Description_DataCard1_2.DataCardValue74_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.'End Date_DataCard1_2'.DataCardValue78_2.AccessibleLabel",
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.Description_DataCard1_2.DataCardValue74_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "For Champion Action(C)",
-                "type": "'For Champion Action(C)'.DisplayInitiative.Form3_2.'End Date_DataCard1_2'.DataCardValue78_2"
+                "type": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.Description_DataCard1_2.DataCardValue74_2"
               }
             }
           ],
@@ -17157,19 +17157,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.'Target Audience_DataCard1_2'.DataCardValue79_2.AccessibleLabel"
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.'Initiative Name_DataCard1_2'.DataCardValue73_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.'Target Audience_DataCard1_2'.DataCardValue79_2.AccessibleLabel",
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.'Initiative Name_DataCard1_2'.DataCardValue73_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "For Champion Action(C)",
-                "type": "'For Champion Action(C)'.DisplayInitiative.Form3_2.'Target Audience_DataCard1_2'.DataCardValue79_2"
+                "type": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.'Initiative Name_DataCard1_2'.DataCardValue73_2"
               }
             }
           ],
@@ -17187,19 +17187,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.Budget_DataCard1_2.DataCardValue80_2.AccessibleLabel"
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.InitiativeCode_DataCard1_2.DataCardValue72_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Form3_2.Budget_DataCard1_2.DataCardValue80_2.AccessibleLabel",
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.InitiativeCode_DataCard1_2.DataCardValue72_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "For Champion Action(C)",
-                "type": "'For Champion Action(C)'.DisplayInitiative.Form3_2.Budget_DataCard1_2.DataCardValue80_2"
+                "type": "'For Champion Action(C)'.DisplayInitiative.Container87.Form3_2.InitiativeCode_DataCard1_2.DataCardValue72_2"
               }
             }
           ],
@@ -29721,6 +29721,66 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Icon3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Icon3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "For Champion Action(C)",
+                "type": "'For Champion Action(C)'.DisplayInitiative.Icon3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Icon3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'For Champion Action(C)'.DisplayInitiative.Icon3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "For Champion Action(C)",
+                "type": "'For Champion Action(C)'.DisplayInitiative.Icon3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
         },
         {
           "locations": [
