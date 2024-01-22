@@ -4,9 +4,7 @@
         CurrentScreen: ="Configuration"
         Height: =768
         MainMenuOnselect: ="Text"
-        SubMenuOnselect: |-
-            =Set(VarSubTab,ThisItem.Title);
-            Navigate(ThisItem.TargetScreen,Transition.None);
+        SubMenuOnselect: =
 
     "'SHSConfig Main' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-SHSConfigComp.ComHeaderHeight
@@ -489,9 +487,38 @@
                         Button17_2 As button:
                             Fill: =RGBA(5, 163, 145, 1)
                             HoverFill: =Self.Fill
-                            OnSelect: |
-                                =Set(VarNewYear,Newyear.Text);
-                                If(VarNewYear="",Notify("Please Enter new Year",NotificationType.Warning,1000),Patch('HACT Config',Defaults('HACT Config'),{'New Performance Year':Newyear.Text});Notify("New Performance Year Added",NotificationType.Success,1000))
+                            OnSelect: |-
+                                =Set(
+                                    VarNewYear,
+                                    Newyear.Text
+                                );
+                                If(
+                                    VarNewYear = "",
+                                    Notify(
+                                        "Please Enter new Year",
+                                        NotificationType.Warning,
+                                        1000
+                                    ),
+                                    If(
+                                        CountRows(
+                                            Filter(
+                                                'HACT Config',
+                                                'New Performance Year' = Newyear.Text
+                                            )
+                                        ) > 0,
+                                       Notify( "Duplicate year not allowed",NotificationType.Warning),
+                                        Patch(
+                                            'HACT Config',
+                                            Defaults('HACT Config'),
+                                            {'New Performance Year': Newyear.Text}
+                                        );
+                                        Notify(
+                                            "New Performance Year Added",
+                                            NotificationType.Success,
+                                            1000
+                                        );
+                                    )
+                                )
                             PressedColor: =Self.Color
                             PressedFill: =Self.Fill
                             Text: ="Add"

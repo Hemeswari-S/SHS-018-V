@@ -3,9 +3,7 @@ Dashboard As screen:
     compDB As Component1:
         Height: =768
         MainMenuOnselect: ="Text"
-        SubMenuOnselect: |-
-            =Set(VarSubTab,ThisItem.Title);
-            Navigate(ThisItem.TargetScreen,Transition.None);
+        SubMenuOnselect: =
 
     Container4 As groupContainer.horizontalAutoLayoutContainer:
         Height: =645
@@ -52,7 +50,7 @@ Dashboard As screen:
                     Height: =35
                     PaddingLeft: =25
                     Size: =10
-                    Text: =CountRows(Filter(InitiativeCollection,Title=ThisItem.'Division Name'))& " Initiatives"
+                    Text: =CountRows(Filter('Initiative List',Title=ThisItem.'Division Name'))& " Initiatives"
                     ZIndex: =2
 
                 Container86 As groupContainer.manualLayoutContainer:
@@ -70,7 +68,7 @@ Dashboard As screen:
                                 Not(
                                     IsEmpty(
                                         Filter(
-                                            InitiativeCollection,
+                                            'Initiative List',
                                             Title = ThisItem.'Division Name'
                                         )
                                     )
@@ -78,7 +76,7 @@ Dashboard As screen:
                                 RoundUp(
                                     Average(
                                         Filter(
-                                            InitiativeCollection,
+                                            'Initiative List',
                                             Title = ThisItem.'Division Name'
                                         ),
                                         'Initiative Progess'
@@ -100,7 +98,7 @@ Dashboard As screen:
                         Align: =Align.Center
                         FontWeight: =FontWeight.Semibold
                         Size: =10
-                        Text: =If(Not(IsEmpty(Filter(InitiativeCollection,Title=ThisItem.'Division Name'))),RoundUp(Average(Filter(InitiativeCollection,Title=ThisItem.'Division Name'),'Initiative Progess'),1)&"% Inprogress","0 Inprogress")
+                        Text: =If(Not(IsEmpty(Filter('Initiative List',Title=ThisItem.'Division Name'))),RoundUp(Average(Filter('Initiative List',Title=ThisItem.'Division Name'),'Initiative Progess'),1)&"% Inprogress","0 Inprogress")
                         Width: =Parent.Width-50
                         X: =25
                         ZIndex: =2

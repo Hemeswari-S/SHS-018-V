@@ -4,9 +4,7 @@ Division As screen:
         CurrentScreen: ="Administration"
         Height: =768
         MainMenuOnselect: ="Text"
-        SubMenuOnselect: |-
-            =Set(VarSubTab,ThisItem.Title);
-            Navigate(ThisItem.TargetScreen,Transition.None);
+        SubMenuOnselect: =
 
     Main As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Regular

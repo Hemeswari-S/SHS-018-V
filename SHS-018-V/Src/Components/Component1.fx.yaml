@@ -4,9 +4,7 @@ Component1 As CanvasComponent:
             Default: ="Text"
     SubMenuOnselect():
         ThisProperty:
-            Default: |-
-                =Set(VarSubTab,ThisItem.Title);
-                Navigate(ThisItem.TargetScreen,Transition.None);
+            Default: =
     Adminicon_menu: |-
         =Table(
             {
@@ -457,7 +455,9 @@ Component1 As CanvasComponent:
         Label42 As label:
             Fill: =If(ThisItem.Title=MainMenu.Selected.Title,Color.AliceBlue,RGBA(0, 0, 0, 0))
             FontWeight: =FontWeight.Semibold
-            OnSelect: =Component1.MainMenuOnselect()
+            OnSelect: |-
+                =Component1.MainMenuOnselect();
+                Navigate(ThisItem.TargetScreen)
             PaddingLeft: =40
             Text: =ThisItem.Title
             Width: =MainMenu.Width
@@ -503,7 +503,7 @@ Component1 As CanvasComponent:
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
         Fill: =Color.WhiteSmoke
-        Height: =110
+        Height: =123
         Items: =Component1.Adminicon_menu
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -512,8 +512,7 @@ Component1 As CanvasComponent:
         TemplateSize: =50
         Visible: =ShowMenuadmin
         Width: =200
-        X: =1166
-        Y: =135
+        X: =1034
         ZIndex: =5
 
         Label15 As label:

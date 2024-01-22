@@ -3,9 +3,7 @@
     "'compAllInitiatives(C)' As Component1":
         Height: =768
         MainMenuOnselect: ="Text"
-        SubMenuOnselect: |-
-            =Set(VarSubTab,ThisItem.Title);
-            Navigate(ThisItem.TargetScreen,Transition.None);
+        SubMenuOnselect: =
 
     "'Main-All Initiatives(C)' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-'compAllInitiatives(C)'.ComHeaderHeight

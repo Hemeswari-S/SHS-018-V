@@ -3,9 +3,7 @@
     "'compForChampionAction(C)' As Component1":
         Height: =768
         MainMenuOnselect: ="Text"
-        SubMenuOnselect: |-
-            =Set(VarSubTab,ThisItem.Title);
-            Navigate(ThisItem.TargetScreen,Transition.None);
+        SubMenuOnselect: =
 
     "'Main-For Champion Action(C)' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-'compForChampionAction(C)'.ComHeaderHeight
@@ -1749,8 +1747,8 @@
                         PaddingLeft: =0
                         PaddingRight: =0
                         PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Text: =If(DataCardValue77.SelectedDate=Today(),"* Select Future Dates",If(DataCardValue77.SelectedDate<Today(),"* Past Dates Not Allowed"))
+                        Visible: =If(DataCardValue77.SelectedDate<Today()||DataCardValue77.SelectedDate=Today(),true,false)
                         Width: =Parent.Width - 60
                         X: =30
                         Y: =DataCardValue77.Y + DataCardValue77.Height
@@ -1816,8 +1814,8 @@
                         PaddingLeft: =0
                         PaddingRight: =0
                         PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Text: =If(DataCardValue78.SelectedDate<=DataCardValue77.SelectedDate,"* Select Valid Date")
+                        Visible: =If(DataCardValue78.SelectedDate<=DataCardValue77.SelectedDate, true)
                         Width: =Parent.Width - 60
                         X: =30
                         Y: =DataCardValue78.Y + DataCardValue78.Height
@@ -1989,6 +1987,7 @@
             ZIndex: =4
 
             Button1 As button:
+                DisplayMode: =If(Not(Form3.Valid)||ErrorMessage77.Visible||ErrorMessage78.Visible,DisplayMode.Disabled,DisplayMode.Edit)
                 Fill: =RGBA(5, 126, 240, 1)
                 HoverFill: |
                     =Self.Fill
@@ -3492,7 +3491,7 @@
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
         Y: ='compForChampionAction(C)'.ComHeaderHeight
-        ZIndex: =11
+        ZIndex: =9
 
         Container73 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -3635,7 +3634,7 @@
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
         Y: =compForAdminAction.ComHeaderHeight
-        ZIndex: =12
+        ZIndex: =10
 
         "'Send for Approval_popup_8' As groupContainer.manualLayoutContainer":
             Fill: =RGBA(255, 255, 255, 1)
@@ -3720,7 +3719,7 @@
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
         Y: =compForAdminAction.ComHeaderHeight
-        ZIndex: =13
+        ZIndex: =11
 
         "'Send for Approval_popup_9' As groupContainer.manualLayoutContainer":
             Fill: =RGBA(255, 255, 255, 1)
@@ -3741,7 +3740,7 @@
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
         Y: ='compForChampionAction(C)'.ComHeaderHeight
-        ZIndex: =14
+        ZIndex: =12
 
         Container84 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer

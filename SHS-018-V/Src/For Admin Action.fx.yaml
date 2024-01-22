@@ -1,5 +1,11 @@
 "'For Admin Action' As screen":
 
+    compForAdminAction As Component1:
+        CurrentScreen: ="Inbox"
+        Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: =
+
     RejectPopup As groupContainer.manualLayoutContainer:
         Fill: =RGBA(152, 208, 70, 1)
         Height: =557
@@ -7,7 +13,7 @@
         Width: =1063
         X: =293
         Y: =196
-        ZIndex: =1
+        ZIndex: =2
 
         Label37_2 As label:
             FontWeight: =FontWeight.Bold
@@ -48,15 +54,6 @@
             X: =44
             Y: =181
             ZIndex: =6
-
-    compForAdminAction As Component1:
-        CurrentScreen: ="Inbox"
-        Height: =768
-        MainMenuOnselect: ="Text"
-        SubMenuOnselect: |-
-            =Set(VarSubTab,ThisItem.Title);
-            Navigate(ThisItem.TargetScreen,Transition.None);
-        ZIndex: =2
 
     Container14_8 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(255, 255, 255, 1)
@@ -2439,7 +2436,7 @@
             Button3_2 As button:
                 OnSelect: =SubmitForm(EvidenceformForadminAction_1);
                 Text: ="Upload"
-                X: =918
+                X: =180
                 Y: =500
                 ZIndex: =2
 
@@ -2447,7 +2444,20 @@
                 OnSelect: |-
                     =UpdateContext({EvidenceStudyPopup:false})
                 Text: ="Cancel"
-                X: =1106
+                Width: =248.79999999999995
+                X: =552
                 Y: =500
                 ZIndex: =3
+
+    Container92 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(16, 232, 203, 0.21)
+        Height: =App.Height-compForAdminAction.ComHeaderHeight
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Width: =App.Width-compForAdminAction.VarMenuWidth
+        X: =compForAdminAction.VarMenuWidth
+        Y: =compForAdminAction.ComHeaderHeight
+        ZIndex: =12
 

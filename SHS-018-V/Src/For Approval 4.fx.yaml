@@ -3,9 +3,7 @@
     "'compForApproval(A4)' As Component1":
         Height: =768
         MainMenuOnselect: ="Text"
-        SubMenuOnselect: |-
-            =Set(VarSubTab,ThisItem.Title);
-            Navigate(ThisItem.TargetScreen,Transition.None);
+        SubMenuOnselect: =
 
     "'ForApprovel1-main_3' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-'compForApproval(A1)'.ComHeaderHeight
