@@ -3,6 +3,8 @@
     compSegmentMember As Component1:
         CurrentScreen: ="Administration"
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
 
     "'Main-Segmentmember' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-compSegmentMember.ComHeaderHeight

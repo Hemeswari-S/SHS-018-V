@@ -5069,9 +5069,11 @@
         "InvariantPropertyName": "LoginNameMenu",
         "IsLockable": false,
         "NameMapSourceSchema": "?"
-      }
+      },
+      "MainMenuOnselect",
+      "SubMenuOnselect"
     ],
-    "LastModifiedTimestamp": "638415044142021696",
+    "LastModifiedTimestamp": "638415058876552461",
     "Name": "Component1",
     "Rules": [
       {
@@ -5132,6 +5134,18 @@
         "Category": "Data",
         "InvariantScript": "If(\n    VarUSerName = \"admin\",\n    Table({Title: \"A\",color: Color.DeepPink}),\n    If(\n        VarUSerName = \"champion\",\n        Table(\n            {\n                Title: \"C\",\n                color: Color.DeepSkyBlue\n            }\n        ),\n        If(\n            VarUSerName = \"approver1\",\n            Table(\n                {\n                    Title: \"A1\",\n                    color: Color.DarkBlue\n                }\n            ),\n            If(\n                VarUSerName = \"approver2\",\n                Table(\n                    {\n                        Title: \"A2\",\n                        color: Color.DarkViolet\n                    }\n                ),\n                If(\n                    VarUSerName = \"approver3\",\n                    Table(\n                        {\n                            Title: \"A3\",\n                            color: Color.DarkCyan\n                        }\n                    ),\n                    If(\n                        VarUSerName = \"approver4\",\n                        Table(\n                            {\n                                Title: \"A4\",\n                                color: Color.DarkSalmon\n                            }\n                        )\n                    )\n                )\n            )\n        )\n    )\n)",
         "Property": "LoginNameMenu",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "\"Text\"",
+        "Property": "MainMenuOnselect",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "\"Text\"",
+        "Property": "SubMenuOnselect",
         "RuleProviderType": "System"
       },
       {
@@ -5271,6 +5285,32 @@
       "PropertyDataTypeKey": "Table",
       "Tooltip": "A custom property",
       "Type": "{\"Version\":\"1.336\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Title\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"color\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "MainMenuOnselect",
+      "Hidden": false,
+      "Name": "MainMenuOnselect",
+      "PropertyDataTypeKey": "String",
+      "PropertyScopeKey": {
+        "PropertyScopeRuleNamespaceKey": "4",
+        "PropertyScopeRulesKey": []
+      },
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.336\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "SubMenuOnselect",
+      "Hidden": false,
+      "Name": "SubMenuOnselect",
+      "PropertyDataTypeKey": "String",
+      "PropertyScopeKey": {
+        "PropertyScopeRuleNamespaceKey": "4",
+        "PropertyScopeRulesKey": []
+      },
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.336\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -5281,7 +5321,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638415044142021696",
+  "LastModifiedTimestamp": "638415058876552461",
   "Name": "415e1786c3c94354acf26afaf63ccb82",
   "OverridableProperties": {},
   "Version": "638327128456687156"

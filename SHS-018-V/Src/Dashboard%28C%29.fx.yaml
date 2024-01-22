@@ -37,5 +37,7 @@
 
     Component1_9 As Component1:
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
         ZIndex: =3
 

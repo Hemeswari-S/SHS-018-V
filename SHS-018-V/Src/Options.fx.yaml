@@ -3,6 +3,8 @@ Options As screen:
     compOptions As Component1:
         CurrentScreen: ="Administration"
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
 
     "'Main-Options' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-compOptions.ComHeaderHeight

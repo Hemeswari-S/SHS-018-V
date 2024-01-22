@@ -3,6 +3,8 @@ Subfactors As screen:
     CompSubFactors As Component1:
         CurrentScreen: ="Administration"
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
 
     "'Main-SubFactors' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-CompSubFactors.ComHeaderHeight

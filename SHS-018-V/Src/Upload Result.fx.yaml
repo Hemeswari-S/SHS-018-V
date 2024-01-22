@@ -3,6 +3,8 @@
     UploadResultComp As Component1:
         CurrentScreen: ="Configuration"
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
 
     "'Main-Study_1' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-compStudy.ComHeaderHeight

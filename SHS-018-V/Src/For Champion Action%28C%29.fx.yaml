@@ -2,6 +2,8 @@
 
     "'compForChampionAction(C)' As Component1":
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
 
     "'Main-For Champion Action(C)' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-'compForChampionAction(C)'.ComHeaderHeight

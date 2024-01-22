@@ -448,5 +448,7 @@
     profilecomp As Component1:
         CurrentScreen: ="MyProfile(Admin)"
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
         ZIndex: =2
 

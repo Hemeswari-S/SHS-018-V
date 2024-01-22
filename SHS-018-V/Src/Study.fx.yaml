@@ -3,6 +3,8 @@ Study As screen:
     compStudy As Component1:
         CurrentScreen: ="Administration"
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
 
     "'Main-Study' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-compStudy.ComHeaderHeight

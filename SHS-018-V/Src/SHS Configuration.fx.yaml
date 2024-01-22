@@ -3,6 +3,8 @@
     SHSConfigComp As Component1:
         CurrentScreen: ="Configuration"
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
 
     "'SHSConfig Main' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-SHSConfigComp.ComHeaderHeight

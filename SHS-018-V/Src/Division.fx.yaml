@@ -3,6 +3,8 @@ Division As screen:
     DivComp As Component1:
         CurrentScreen: ="Administration"
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
 
     Main As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Regular

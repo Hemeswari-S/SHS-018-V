@@ -2,6 +2,8 @@
 
     "'compApprovedInitiatives(C)' As Component1":
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
         ZIndex: =7
 
     "'Main-Approved Initiatives' As groupContainer.verticalAutoLayoutContainer":

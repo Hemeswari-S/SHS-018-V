@@ -3,6 +3,8 @@
     SHSusercomp As Component1:
         CurrentScreen: ="Settings"
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
 
     "'Main(shsuser)' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-SHSusercomp.ComHeaderHeight

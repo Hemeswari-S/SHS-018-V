@@ -3,6 +3,8 @@ Questions As screen:
     compQuestions As Component1:
         CurrentScreen: ="Administration"
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
 
     "'Main-Questions' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-compQuestions.ComHeaderHeight

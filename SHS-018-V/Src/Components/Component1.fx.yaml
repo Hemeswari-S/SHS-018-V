@@ -1,4 +1,10 @@
 Component1 As CanvasComponent:
+    MainMenuOnselect():
+        ThisProperty:
+            Default: ="Text"
+    SubMenuOnselect():
+        ThisProperty:
+            Default: ="Text"
     Adminicon_menu: |-
         =Table(
             {

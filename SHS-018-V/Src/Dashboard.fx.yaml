@@ -2,6 +2,8 @@ Dashboard As screen:
 
     compDB As Component1:
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
 
     Container4 As groupContainer.horizontalAutoLayoutContainer:
         Height: =645

@@ -3,6 +3,8 @@
     compAllInitiatives As Component1:
         CurrentScreen: ="Inbox"
         Height: =768
+        MainMenuOnselect: ="Text"
+        SubMenuOnselect: ="Text"
         ZIndex: =2
 
     Container14_7 As groupContainer.verticalAutoLayoutContainer:
