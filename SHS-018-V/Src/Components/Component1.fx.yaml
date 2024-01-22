@@ -434,7 +434,7 @@ Component1 As CanvasComponent:
                 PaddingLeft: =75
                 PressedFill: =Color.Aqua
                 Text: =ThisItem.Title
-                Width: =SubMenu.Width
+                Width: =SubmenuGall.Width
                 ZIndex: =1
 
             "Icon19_2 As icon.'3DPrinting'":
@@ -466,65 +466,6 @@ Component1 As CanvasComponent:
             X: =6
             Y: =9
             ZIndex: =3
-
-        SubMenu As gallery.variableTemplateHeightGallery:
-            DelayItemLoading: =true
-            Height: |-
-                =If(
-                    ThisItem.Title = "Dashboard",
-                    0,
-                    If(
-                        ThisItem.Title = "Inbox",
-                        140,
-                        If(
-                            ThisItem.Title = "Administration",
-                            370,
-                            If(
-                                ThisItem.Title = "Settings",
-                                50,
-                                If(
-                                    ThisItem.Title = "Configuration",
-                                    110,
-                                    0
-                                )
-                            )
-                        )
-                    )
-                )
-            Items: =ThisItem.SubMenu
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            OnSelect: =
-            TemplateFill: =If(CureentScreen=ThisItem.Title,Color.Aqua,Color.AliceBlue)
-            TemplateSize: =280
-            Visible: |-
-                =//If(ThisItem.Title=MainMenu.Selected.Title,!VarExpandMeu)
-                false
-            Width: =If(ShowMenu,App.Width/5,0)
-            Y: =Label42.Height
-            ZIndex: =4
-
-            "Icon19_1 As icon.'3DPrinting'":
-                Height: =25
-                Icon: =ThisItem.Icon
-                OnSelect: =Select(Parent)
-                Width: =25
-                X: =40
-                Y: =20
-                ZIndex: =1
-
-            Label42_1 As label:
-                FontWeight: =FontWeight.Semibold
-                HoverFill: =Color.AntiqueWhite
-                OnSelect: |-
-                    =Set(CureentScreen,ThisItem.Title);
-                    Navigate(ThisItem.TargetScreen,Transition.None);
-                PaddingLeft: =75
-                PressedFill: =Color.Aqua
-                Text: =ThisItem.Title
-                Width: =SubMenu.Width
-                Y: =1
-                ZIndex: =2
 
         UpArrow As icon.ChevronLeft:
             Height: =15

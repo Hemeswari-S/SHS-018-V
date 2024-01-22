@@ -1,12 +1,15 @@
 Dashboard As screen:
 
+    compDB As Component1:
+        Height: =768
+
     Container4 As groupContainer.horizontalAutoLayoutContainer:
         Height: =645
         LayoutMode: =LayoutMode.Auto
         Width: =App.Width-compDB.VarMenuWidth
         X: =compDB.VarMenuWidth
         Y: =123
-        ZIndex: =1
+        ZIndex: =2
 
         DashboardGallery As gallery.galleryVertical:
             DelayItemLoading: =true
@@ -23,7 +26,7 @@ Dashboard As screen:
 
             Container53 As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.Regular
-                Height: =150
+                Height: =115
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMode: =LayoutMode.Auto
                 Width: =DashboardGallery.TemplateWidth-10
@@ -97,8 +100,4 @@ Dashboard As screen:
                         Width: =Parent.Width-50
                         X: =25
                         ZIndex: =2
-
-    compDB As Component1:
-        Height: =768
-        ZIndex: =2
 
