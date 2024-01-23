@@ -2774,7 +2774,7 @@
                 ZIndex: =3
 
     DisplayInitiative As groupContainer.verticalAutoLayoutContainer:
-        Fill: =RGBA(214, 221, 224, 1)
+        Fill: =RGBA(211, 218, 222, 1)
         Height: =App.Height-'compForChampionAction(C)'.ComHeaderHeight
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
@@ -3638,27 +3638,40 @@
                     Y: =462
                     ZIndex: =2
 
-    "'For Evidence Initiative_1' As groupContainer.manualLayoutContainer":
-        Fill: =RGBA(40, 134, 222, 0.15)
-        Height: =App.Height-compForAdminAction.ComHeaderHeight
+    "'Evedence for Inititives' As groupContainer.verticalAutoLayoutContainer":
+        Fill: =RGBA(173, 255, 251, 0.16)
+        Height: =App.Height-'compForChampionAction(C)'.ComHeaderHeight
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
         Visible: =EvidenceinitativePopup
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
-        Y: =compForAdminAction.ComHeaderHeight
+        Y: ='compForChampionAction(C)'.ComHeaderHeight
         ZIndex: =10
 
-        "'Send for Approval_popup_8' As groupContainer.manualLayoutContainer":
+        Container101 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Bold
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =571
-            Width: =Parent.Width-100
-            X: =55
-            Y: =45
+            FillPortions: =0
+            Height: =600
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =900
             ZIndex: =1
 
             EvidenceformForadminAction_2 As form:
                 DataSource: ='Initiative List'
                 Height: =488
                 Item: =Gallery_study_3.Selected
+                LayoutMinHeight: =250
+                LayoutMinWidth: =400
                 NumberOfColumns: =1
                 Width: =Parent.Width
                 ZIndex: =1
@@ -3708,37 +3721,36 @@
                         Y: =DataCardKey112_1.Y + DataCardKey112_1.Height + 5
                         ZIndex: =2
 
-            Button3_4 As button:
-                OnSelect: =SubmitForm(EvidenceformForadminAction_2);
-                Text: ="Upload"
-                X: =918
-                Y: =500
+            Container102 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =100
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =40
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
                 ZIndex: =2
 
-            Button3_5 As button:
-                OnSelect: |-
-                    =UpdateContext({EvidenceinitativePopup:false})
-                Text: ="Cancel"
-                X: =1106
-                Y: =500
-                ZIndex: =3
+                Button3_4 As button:
+                    Fill: =RGBA(54, 176, 75, 1)
+                    HoverFill: =Self.Fill
+                    OnSelect: =SubmitForm(EvidenceformForadminAction_2);
+                    Text: ="Upload"
+                    X: =918
+                    Y: =500
+                    ZIndex: =1
 
-    "'For Evidence for Study_1' As groupContainer.manualLayoutContainer":
-        Fill: =RGBA(40, 134, 222, 0.15)
-        Height: =App.Height-compForAdminAction.ComHeaderHeight
-        Visible: =//EvidenceStudyPopup
-        Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
-        X: ='compForChampionAction(C)'.VarMenuWidth
-        Y: =compForAdminAction.ComHeaderHeight
-        ZIndex: =11
-
-        "'Send for Approval_popup_9' As groupContainer.manualLayoutContainer":
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =571
-            Width: =1037.8
-            X: =55
-            Y: =45
-            ZIndex: =1
+                Button3_5 As button:
+                    Fill: =RGBA(215, 58, 60, 1)
+                    HoverFill: =Self.Fill
+                    OnSelect: |-
+                        =UpdateContext({EvidenceinitativePopup:false})
+                    Text: ="Cancel"
+                    X: =188
+                    Y: =500
+                    ZIndex: =2
 
     Evidence_Study As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(20, 224, 211, 0.16)
@@ -3751,7 +3763,7 @@
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
         Y: ='compForChampionAction(C)'.ComHeaderHeight
-        ZIndex: =12
+        ZIndex: =11
 
         Container84 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
