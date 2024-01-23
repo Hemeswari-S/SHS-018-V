@@ -1214,7 +1214,7 @@
             ZIndex: =7
 
             ButtonCanvas2_2 As Button:
-                BasePaletteColor: =
+                BasePaletteColor: =RGBA(19, 207, 194, 1)
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
                 Height: =32
@@ -1229,7 +1229,7 @@
                 ZIndex: =1
 
             ButtonCanvas2_3 As Button:
-                BasePaletteColor: =
+                BasePaletteColor: =RGBA(180, 214, 250, 1)
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
                 Height: =32
@@ -1240,6 +1240,14 @@
                 X: =0
                 Y: =0
                 ZIndex: =2
+
+            Container99 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                Width: =30
+                ZIndex: =3
 
     DisplayInitiative_1 As groupContainer.verticalAutoLayoutContainer:
         Fill: =Color.Beige
@@ -2119,23 +2127,9 @@
                 LayoutMode: =LayoutMode.Auto
                 ZIndex: =4
 
-                Button6 As button:
-                    AlignInContainer: =AlignInContainer.Center
-                    Fill: =RGBA(255, 0, 0, 1)
-                    Height: =57
-                    HoverFill: =Self.Fill
-                    OnSelect: |-
-                        =UpdateContext({Sendforapprovaladmin:false})
-                    Text: ="Cancel"
-                    Width: =150
-                    X: =570
-                    Y: =381
-                    ZIndex: =1
-
                 Button5_16 As button:
                     AlignInContainer: =AlignInContainer.Center
                     Fill: =RGBA(54, 176, 75, 1)
-                    Height: =57
                     HoverFill: =Self.Fill
                     OnSelect: |-
                         =UpdateContext({Resetcheckbox: false});
@@ -2143,7 +2137,7 @@
                             JSON(ValueofId),
                             "Approval1",
                             Gallery_study_7.Selected.ID,
-                            TextInput3_3.Text
+                            TextInput2.Text
                         );
                         UpdateContext({Sendforapprovaladmin: false});
                         Notify(
@@ -2153,61 +2147,23 @@
                         Clear(ValueofId);
                         UpdateContext({Resetcheckbox: true});
                         Reset(Checkbox2_2)
-                    Text: ="Confirm"
+                    Text: ="Approval"
                     Width: =150
                     X: =214
                     Y: =381
+                    ZIndex: =1
+
+                Button6 As button:
+                    AlignInContainer: =AlignInContainer.Center
+                    Fill: =RGBA(255, 0, 0, 1)
+                    HoverFill: =Self.Fill
+                    OnSelect: |-
+                        =UpdateContext({Sendforapprovaladmin:false})
+                    Text: ="Cancel"
+                    Width: =150
+                    X: =570
+                    Y: =381
                     ZIndex: =2
-
-    RejectPopup_1 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(152, 208, 70, 1)
-        Height: =557
-        Visible: =rejectpopup
-        Width: =1063
-        X: =303
-        Y: =211
-        ZIndex: =8
-
-        Button5_7 As button:
-            DisplayMode: =If(TextInput3_3.Text="",DisplayMode.Disabled,DisplayMode.Edit)
-            Height: =57
-            OnSelect: |-
-                =UpdateContext({Resetcheckbox: false});
-                ApprovalFlowforAdminAction.Run(JSON(ValueofId),"Rejected",Gallery_study_3.Selected.ID,TextInput3_3.Text);
-                UpdateContext({Sendforapprovaladmin:false}); Notify("The Initiative is Rejected successfully",NotificationType.Success);
-                
-                
-                Clear(ValueofId);
-                UpdateContext({Resetcheckbox: true});
-                Reset(Checkbox2_2);
-                
-                UpdateContext({rejectpopup: false});
-            Text: ="Confirm"
-            Width: =210
-            X: =832
-            Y: =462
-            ZIndex: =4
-
-        Button5_6 As button:
-            Fill: =RGBA(255, 191, 0, 1)
-            Height: =57
-            OnSelect: |-
-                =UpdateContext({rejectpopup:false})
-            Text: ="Cancel"
-            Width: =210
-            X: =519
-            Y: =462
-            ZIndex: =5
-
-        TextInput3_3 As text:
-            Default: =""
-            Height: =235
-            HintText: ="Add Comments "
-            Size: =18
-            Width: =725
-            X: =56
-            Y: =175
-            ZIndex: =6
 
     "'Reject-popup' As groupContainer.verticalAutoLayoutContainer":
         Fill: =RGBA(56, 245, 223, 0.18)
@@ -2216,9 +2172,7 @@
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
-        Visible: |-
-            =//rejectpopup
-            false
+        Visible: =rejectpopup
         Width: =App.Width-compForAdminAction.VarMenuWidth
         X: =compForAdminAction.VarMenuWidth
         Y: =compForAdminAction.ComHeaderHeight
@@ -2227,7 +2181,7 @@
         Container88 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Bold
-            Fill: =RGBA(253, 207, 180, 1)
+            Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =550
             LayoutAlignItems: =LayoutAlignItems.Center
@@ -2261,8 +2215,9 @@
                     ZIndex: =1
 
             Container90 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
                 FillPortions: =0
-                Height: =100
+                Height: =90
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
@@ -2270,13 +2225,79 @@
                 ZIndex: =2
 
                 Label38_3 As label:
+                    Align: =Align.Center
                     Height: =80
                     Size: =20
-                    Text: ="Are you sure you want to reject the initiatives of '"&Gallery_study_3.Selected.Study&"'?"
+                    Text: ="Are you sure you want to reject the initiatives of '""" &Gallery_study_3.Selected.Study& """' ?"
                     Width: =869
                     X: =44
                     Y: =95
                     ZIndex: =1
+
+            Container95 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =3
+
+                TextInput2 As text:
+                    Default: =""
+                    Height: =250
+                    HintText: ="Add Comments"
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    Width: =720
+                    ZIndex: =1
+
+            Container96 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =10
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =4
+
+            Container98 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =70
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =40
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =5
+
+                Button2 As button:
+                    Fill: =RGBA(54, 176, 75, 1)
+                    HoverFill: =Self.Fill
+                    OnSelect: |-
+                        =UpdateContext({Resetcheckbox: false});
+                        ApprovalFlowforAdminAction.Run(JSON(ValueofId),"Rejected",Gallery_study_3.Selected.ID,TextInput2.Text);
+                        UpdateContext({Sendforapprovaladmin:false}); Notify("The Initiative is Rejected successfully",NotificationType.Success);
+                        
+                        
+                        Clear(ValueofId);
+                        UpdateContext({Resetcheckbox: true});
+                        Reset(Checkbox2_2);
+                        
+                        UpdateContext({rejectpopup: false});
+                    Text: ="Approval"
+                    ZIndex: =1
+
+                Button7 As button:
+                    Fill: =RGBA(215, 58, 60, 1)
+                    HoverFill: =Self.Fill
+                    OnSelect: |-
+                        =UpdateContext({rejectpopup:false})
+                    Text: ="Cancel"
+                    ZIndex: =2
 
     "'For Evidence Initiative' As groupContainer.manualLayoutContainer":
         Fill: =RGBA(40, 134, 222, 0.15)
@@ -2363,28 +2384,43 @@
                 Y: =500
                 ZIndex: =3
 
-    "'For Evidence for Study' As groupContainer.manualLayoutContainer":
-        Fill: =RGBA(40, 134, 222, 0.15)
+    "'For Evidence Study Popup' As groupContainer.verticalAutoLayoutContainer":
+        Fill: =RGBA(16, 232, 203, 0.21)
         Height: =App.Height-compForAdminAction.ComHeaderHeight
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
         Visible: =EvidenceStudyPopup
         Width: =App.Width-compForAdminAction.VarMenuWidth
         X: =compForAdminAction.VarMenuWidth
         Y: =compForAdminAction.ComHeaderHeight
-        ZIndex: =11
+        ZIndex: =12
 
-        "'Send for Approval_popup_7' As groupContainer.manualLayoutContainer":
+        Container93 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Bold
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =571
-            Width: =Parent.Width-100
-            X: =55
-            Y: =45
+            FillPortions: =0
+            Height: =600
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =50
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =900
             ZIndex: =1
 
             EvidenceformForadminAction_1 As form:
                 DataSource: ='Divisions With Study'
+                DefaultMode: =FormMode.New
                 Height: =488
                 Item: =Gallery_study_7.Selected
+                LayoutMinHeight: =250
+                LayoutMinWidth: =400
                 NumberOfColumns: =1
+                OnSuccess: =ResetForm(EvidenceformForadminAction_1)
                 Width: =Parent.Width
                 ZIndex: =1
 
@@ -2398,15 +2434,17 @@
                     Height: =485
                     Required: =false
                     Update: =DataCardValue121.Attachments
-                    Width: =1266
+                    Width: =900
                     X: =0
                     Y: =0
                     ZIndex: =2
 
                     DataCardKey120 As label:
                         AutoHeight: =true
+                        Color: =RGBA(21, 68, 18, 1)
                         FontWeight: =FontWeight.Bold
                         Height: =34
+                        Size: =15
                         Text: ="Attach Evidence Here"
                         Width: =Parent.Width - 60
                         Wrap: =false
@@ -2433,31 +2471,34 @@
                         Y: =DataCardKey120.Y + DataCardKey120.Height + 5
                         ZIndex: =2
 
-            Button3_2 As button:
-                OnSelect: =SubmitForm(EvidenceformForadminAction_1);
-                Text: ="Upload"
-                X: =180
-                Y: =500
+            Container94 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =100
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =40
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
                 ZIndex: =2
 
-            Button3_3 As button:
-                OnSelect: |-
-                    =UpdateContext({EvidenceStudyPopup:false})
-                Text: ="Cancel"
-                Width: =248.79999999999995
-                X: =552
-                Y: =500
-                ZIndex: =3
+                Button3_2 As button:
+                    Fill: =RGBA(7, 135, 133, 1)
+                    HoverFill: =Self.Fill
+                    OnSelect: =SubmitForm(EvidenceformForadminAction_1);
+                    Text: ="Upload"
+                    X: =180
+                    Y: =500
+                    ZIndex: =1
 
-    Container92 As groupContainer.verticalAutoLayoutContainer:
-        Fill: =RGBA(16, 232, 203, 0.21)
-        Height: =App.Height-compForAdminAction.ComHeaderHeight
-        LayoutAlignItems: =LayoutAlignItems.Center
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutJustifyContent: =LayoutJustifyContent.Center
-        LayoutMode: =LayoutMode.Auto
-        Width: =App.Width-compForAdminAction.VarMenuWidth
-        X: =compForAdminAction.VarMenuWidth
-        Y: =compForAdminAction.ComHeaderHeight
-        ZIndex: =12
+                Button3_3 As button:
+                    Fill: =RGBA(233, 79, 76, 1)
+                    HoverFill: =Self.Fill
+                    OnSelect: |-
+                        =UpdateContext({EvidenceStudyPopup:false})
+                    Text: ="Cancel"
+                    X: =372
+                    Y: =500
+                    ZIndex: =2
 

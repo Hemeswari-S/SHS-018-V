@@ -953,7 +953,7 @@ Study As screen:
                     ZIndex: =1
 
                 Button13_34 As button:
-                    Fill: =RGBA(71, 158, 245, 1)
+                    Fill: =RGBA(215, 58, 60, 1)
                     HoverFill: =Self.Fill
                     OnSelect: |-
                         =UpdateContext({ShowPopup_Edit:false})
@@ -1028,7 +1028,7 @@ Study As screen:
                 ZIndex: =3
 
                 Button16_12 As button:
-                    Fill: =RGBA(215, 58, 60, 1)
+                    Fill: =RGBA(54, 176, 75, 1)
                     HoverFill: =Self.Fill
                     OnSelect: |-
                         =Remove('Study(Administration)',Gallery_study.Selected);UpdateContext({ShowPopup_Delete:false});Notify("The Study has been deleted sucessfully",NotificationType.Success)

@@ -1252,6 +1252,7 @@
                             ZIndex: =3
 
         Container62_3 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
             FillPortions: =0
             Height: =50
             LayoutAlignItems: =LayoutAlignItems.Center
@@ -1304,9 +1305,12 @@
         ZIndex: =5
 
         Container68 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.None
             Height: =App.Height-'compForChampionAction(C)'.ComHeaderHeight
+            LayoutAlignItems: =LayoutAlignItems.Center
             LayoutDirection: =LayoutDirection.Vertical
+            LayoutJustifyContent: =LayoutJustifyContent.Center
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -2853,7 +2857,8 @@
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
                         MaxLength: =Parent.MaxLength
-                        PaddingLeft: =5
+                        PaddingLeft: =15
+                        PaddingRight: =35
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -2922,7 +2927,7 @@
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
                         MaxLength: =Parent.MaxLength
-                        PaddingLeft: =5
+                        PaddingLeft: =15
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -2992,7 +2997,7 @@
                         DisplayMode: =Parent.DisplayMode
                         Height: =85
                         MaxLength: =Parent.MaxLength
-                        PaddingLeft: =5
+                        PaddingLeft: =15
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -3060,7 +3065,9 @@
                         DisplayFields: =["Value"]
                         DisplayMode: =Parent.DisplayMode
                         Items: =Choices([@'Initiative List'].Factor)
-                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PaddingLeft: |
+                            =//If(Self.DisplayMode = DisplayMode.Edit, 25, 0)
+                            15
                         SearchFields: =["Value"]
                         SearchItems: =Choices('Initiative List'.Factor,DataCardValue75_2.SearchText)
                         SelectMultiple: =false
@@ -3127,7 +3134,7 @@
                         DisplayFields: =["Value"]
                         DisplayMode: =Parent.DisplayMode
                         Items: =Choices([@'Initiative List'].SubFactors)
-                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PaddingLeft: =15
                         SearchFields: =["Value"]
                         SearchItems: =Choices('Initiative List'.SubFactors,DataCardValue76_2.SearchText)
                         SelectMultiple: =false
@@ -3195,7 +3202,9 @@
                         EndYear: =Year(Today())+100
                         IsEditable: =true
                         PaddingBottom: =0
-                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PaddingLeft: |-
+                            =//If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            15
                         StartYear: =1899
                         Tooltip: =Parent.DisplayName
                         Width: =(Parent.Width - 60) * 0.6
@@ -3261,7 +3270,9 @@
                         EndYear: =Year(Today())+100
                         IsEditable: =true
                         PaddingBottom: =0
-                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PaddingLeft: |
+                            =//If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            15
                         StartYear: =1899
                         Tooltip: =Parent.DisplayName
                         Width: =(Parent.Width - 60) * 0.6
@@ -3327,7 +3338,7 @@
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
                         MaxLength: =Parent.MaxLength
-                        PaddingLeft: =5
+                        PaddingLeft: =15
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -3395,7 +3406,7 @@
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
                         Format: =TextFormat.Number
-                        PaddingLeft: =5
+                        PaddingLeft: =15
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
